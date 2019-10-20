@@ -16,4 +16,17 @@ public class jScrapper{
         pageVisited.add(nextURL);
         return nextURL;
     }
+
+    public void search(String url, String word){
+        pagesToVisit.add(url);
+        int searchPage = 0;
+        while(pagesToVisit.size() != 0 && searchPage <= MAX_PAGES_TO_SEARCH){
+            Crawler spike = new Crawler();
+
+            spike.crawl(nextUrl());
+
+            boolean found = spike.searchForWord(word);
+
+        }
+    }
 }
