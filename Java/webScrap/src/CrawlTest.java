@@ -8,7 +8,7 @@ public class CrawlTest {
         System.out.print("Enter the url to start the search:");
         String url = in.nextLine().strip();
 
-        System.out.print("\nEnter search word//sentence: ");
+        System.out.print("\nEnter search word/sentence: ");
         String word = in.nextLine().strip();
 
         System.out.print("\nEnter number of pages(if present, also < 10) to search in: ");
@@ -24,5 +24,7 @@ public class CrawlTest {
         }
 
         System.out.println("\nInitiating....");
+
+        scrap.search(url,word,maxNum);
     }
 }
