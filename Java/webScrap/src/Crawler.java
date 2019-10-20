@@ -51,7 +51,7 @@ public class Crawler {
             System.out.println("Received web page at: " + url);
 
             Elements linksOnPage = htmlDocument.select("a[href]");
-            System.out.println("Found " + "(" + linksOnPage.size() + ")" + " link(s)");
+            System.out.println("Found " + linksOnPage.size() + " link(s)");
             for(Element link: linksOnPage){
                 this.links.add(link.absUrl("href"));
             }

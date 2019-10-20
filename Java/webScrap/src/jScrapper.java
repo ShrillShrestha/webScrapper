@@ -14,7 +14,6 @@ public class jScrapper{
     /*
     declare and instantiate instance variable
      */
-    private static final int MAX_PAGES_TO_SEARCH = 5;
     private Set<String> pageVisited = new HashSet<>();
     private List<String> pagesToVisit = new LinkedList<>();
 
@@ -38,11 +37,11 @@ public class jScrapper{
      * @param url starting url to search for the word
      * @param word word to be searched for in urls
      */
-    public void search(String url, String word){
+    public void search(String url, String word, int maxPage){
         pagesToVisit.add(url);
 
         //checks if pagesToVisit is empty and searchPage exceeds the max number of pages to be searched
-        while(pagesToVisit.size() != 0 && pageVisited.size() <= MAX_PAGES_TO_SEARCH){
+        while(pagesToVisit.size() != 0 && pageVisited.size() <= maxPage){
             Crawler spike = new Crawler();  //declare and instantiate new Crawler object
             String parseUrl = nextUrl(); //url to be used for parsing
 
