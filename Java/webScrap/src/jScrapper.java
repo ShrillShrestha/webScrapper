@@ -22,11 +22,17 @@ public class jScrapper{
         int searchPage = 0;
         while(pagesToVisit.size() != 0 && searchPage <= MAX_PAGES_TO_SEARCH){
             Crawler spike = new Crawler();
+            String parseUrl = nextUrl();
 
-            spike.crawl(nextUrl());
+            spike.crawl(parseUrl);
 
             boolean found = spike.searchForWord(word);
 
+            if (found){
+                System.out.println(String.format("The word \"%s\" found at \"%s\"", word, parseUrl));
+                break;
+            }
+            this.pagesToVisit.addAll(spike.getLinks());
         }
     }
 }
