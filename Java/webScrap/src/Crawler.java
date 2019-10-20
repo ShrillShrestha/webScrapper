@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
-import java.io.IOException;
-
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -65,7 +63,9 @@ public class Crawler {
      * @return boolean value to represent if the word was found in the website
      */
     public boolean searchForWord(String word){
-        return false;
+        System.out.println("Searching for " + word + ".....");
+        String bodyText = this.htmlDocument.body().text(); //document body text stored in a string variable
+        return bodyText.toLowerCase().contains(word.toLowerCase()); //string method contains to search for the sequence of the char in word in the body test
     }
 }
 
