@@ -41,7 +41,7 @@ public class jScrapper{
         pagesToVisit.add(url);
 
         //checks if pagesToVisit is empty and searchPage exceeds the max number of pages to be searched
-        while(pagesToVisit.size() != 0 && pageVisited.size() <= maxPage){
+        while(pagesToVisit.size() != 0 && pageVisited.size() < maxPage){
             Crawler spike = new Crawler();  //declare and instantiate new Crawler object
             String parseUrl = nextUrl(); //url to be used for parsing
 
