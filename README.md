@@ -5,11 +5,11 @@ Basic Workflow: The user is asked for a website to use as a starting point for t
 
 Once everything is there the program makes the connection with the website and the search is initiated. 
 
-Working: I have used a java library called JSoup to deal with all the web connection and extration stuff. The things on my side was to store the extracted links, track the links and determine if they have been visited before(to avoid loops), keep the track of number of pages that are visited. I have used set to deal with the repetation problem and have a queue(implementation of linked list) to deal with storage of the extracted links. 
+Working: I have used a java library called JSoup to deal with all the web connection and extration stuff. The things on my side was to store the extracted links, track the links and determine if they have been visited before(to avoid loops), keep the track of number of pages that are visited. I have used sets to deal with the repetation problem and have a queue(implementation of linkedlist) to deal with storage of the extracted links. 
 
-Once the crawel is initiated, the body of the html document is extarcted by the use of method calls from the Jsoup library. Then the given word/sentence is search against the content of the extracted body and the return boolean result as per the condition.
+Once the crawl is initiated, the body of the html document is extarcted by the use of method calls from the Jsoup library. Then the given word/sentence is search against the content of the extracted body, and returns boolean result as per the condition.
 
-Note: I used intellij IDE for this project and when I ran it in embeded terminal of the IDE, I had to use an extra space at the end of the url when asked for the website as its default behavior is set to open the url in web brower when we press "enter". Also, if you will be using a system terminal, there won't be need of any need of extra space for the senario.
+Note: I used intellij IDE for this project and when I ran it in embeded terminal of the IDE, I had to use an extra space character at the end of the url when asked for the website as its default behavior is set to open the url in web brower when we press "enter". Also, if you will be using a system terminal, there won't be need of any need of extra space character for the senario.
 
 During the course of development I used several resourses: <br>
 http://www.netinstructions.com/how-to-make-a-simple-web-crawler-in-java/ <br>
